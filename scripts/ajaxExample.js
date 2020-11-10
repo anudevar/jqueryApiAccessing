@@ -1,4 +1,4 @@
-$(function () {
+$( document ).ready(function() {
 //This is to take data
     let personData = {
         "url": "https://reqres.in/api/users?page=1",
@@ -20,23 +20,29 @@ $(function () {
         let secondName = value['last_name'];
         let email = value['email'];
         let imageSource = value['avatar'];
-
-        let html = (`<div class = "showMore ` + (key + 1) + `"> <br>
-      <h1> ` + firstName + ` </h1>
-      <div hidden id="` + (key + 1) + `">
+let display = (`<div class ="DisplayName" id= "showMore ` + (key + 1) + `"> <br>
+<button class="displayData"> ` + firstName + `</button></div>
+<div class="hidden" id="more"` + (key + 1) + `">
+    <h1>` + firstName + `</h1> 
       <h1>` + secondName + `</h1> 
       <h1>` + email + `</h1>
       <img src="` + imageSource + `" alt="` + secondName + `">
-    </div>
-      </div>`);
-        $('#mainDiv').append(html);
-    });
+    </div>`);
+    $(".hidden").hide();
 
-//This is show only functionality
+   //This is show only functionality
     /*todo:1.create function for on click and blur
      */
-
-
+    $(".DisplayName").click(function(){ 
+      $(this).parent().addClass("more");
+      $(this).hide();
+      $(this).siblings(".hidden").show();
+    });
+    $(".hidden").click(function(){
+      $(this).parent().removeClass("more");
+      $(this).hide();
+      $(this).siblings(".DisplayName").show();
+    });  
+    $('#mainDiv').append(display); 
 });
-
-
+});

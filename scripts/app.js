@@ -205,3 +205,38 @@ for (i = 0; i < responseData.length; i++) {
   email = responseData[i]["email"];
   avatar = responseData[i]["avatar"];
 } */
+
+/* 
+$(".DisplayName").click(function(){ 
+    $(this).parent().addClass(".hidden");
+    $(this).siblings(".hidden").show();
+    $(this).hide();
+  });
+  $(".DisplayData").click(function(){
+    $(this).parent().removeClass(".hidden");
+    $(this).siblings(".DisplayData").show();
+    $(this).hide();
+  }); */
+
+
+/* 
+        let html = (`<div class ="DisplayName" id= "showMore ` + (key + 1) + `"> <br>
+        <button class="display"> ` + firstName + `</button>
+      
+      </div>`);
+ */
+//This is show only functionality
+    /*todo:1.create function for on click and blur
+     */
+   /*  $(".hidden").hide();
+    $(".DisplayName").click(function(){ 
+      $(this).parent().addClass(".hidden");
+      $(this).hide();
+      $(this).siblings(".hidden").show();
+    });
+    $(".DisplayName").click(function(){
+      $(this).parent().removeClass(".hidden");
+      $(this).hide();
+      $(this).siblings(".DisplayName").show();
+    });
+    $('#mainDiv').append(html); */
