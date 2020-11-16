@@ -240,3 +240,27 @@ $(".DisplayName").click(function(){
       $(this).siblings(".DisplayName").show();
     });
     $('#mainDiv').append(html); */
+
+/* var clickedItem = $(this);
+               var clickedKey = $(this).attr('id').split('showMore')[1];
+               var isObjHasValue = false;
+               var categoriesToBeDisplayed = person[clickedKey];
+               if ($(clickedItem).children('div[id^=showMoreChild]') != undefined && $(clickedItem).children('div[id^=showMoreChild]') != null && $(clickedItem).children('div[id^=showMoreChild]').length > 0) {
+                   //Do nothing..
+               }
+               else if (categoriesToBeDisplayed != null && $(clickedItem).children().length == 0) {
+
+                   $(clickedItem).append("<div id='showMoreChild" + clickedKey + "' class='DisplayName'></div>");
+                   $.each(categoriesToBeDisplayed, function (key, value) {
+                       $("div[id='showMoreChild" + clickedKey + "']").last().append(".hidden");
+                       isObjHasValue = true;
+                   });
+                   if (!isObjHasValue) {
+                       categoriesToBeDisplayed = null;
+                   }
+               }
+               if (categoriesToBeDisplayed == null) {
+                   $("div[id='showMoreChild" + clickedKey + "']").html('');
+                   $("div[id='showMoreChild" + clickedKey + "']").last().append('<p>Nothing found to display!</p>');
+               }
+           }); */
