@@ -1,0 +1,55 @@
+body {background: #f2f2f2;}
+h1, h2, p {font-family: 'Pontano Sans', sans-serif; transition: all 0.5s;}
+h1 {margin: 20px 0 5px 0;
+    font-size: 1.6em}
+h2 {margin: 0 0 20px 0;
+    font-size: 1.4em}
+#mainDiv {
+  width: 60%; 
+  margin: auto;
+  text-align: center;
+  transition: all 0.5s;}
+button, p {
+  display: block; margin: auto;}
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: 1px solid #777;
+  border: none;
+  background: transparent;
+  box-shadow: 2px 5px 5px #888888; 
+}
+button:hover {
+  outline: 2px solid #8CDADE;}
+p, img {
+  width: 80%;
+  margin-top: 10px;
+  text-align: left;
+  transition: all 0.5s}
+.post {
+  border: 1px solid #777;
+  border-radius: 5px;
+  margin-bottom: 10px; 
+  background: #ffffff;
+  transition: all 0.5s;}
+.less { 
+  height: 80px; width: 100%; 
+  overflow: hidden;}
+.more { 
+  height: 400px; width: 100%;
+  overflow: auto;}
+@media screen and (max-width: 500px) {
+  .container {
+    text-align: center;
+    width: 80%;
+  }
+  button, p {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  p, img{text-align: left;
+    width: 96%;}
+  h1 {font-size: 1.3em}
+  h2 {font-size: 1.2em}
+}

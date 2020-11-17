@@ -19,7 +19,6 @@ $(document).ready(function() {
         let secondName = value['last_name'];
         let email = value['email'];
         let imageSource = value['avatar'];
-
 let display = (`<div id= "showMore ` + key + `" class='DisplayName'>
 ` + firstName + ` </div>`
 );
@@ -28,12 +27,18 @@ let display = (`<div id= "showMore ` + key + `" class='DisplayName'>
     /*todo:1.create function for on click and blur
      */
     $(".DisplayName").on('click', function(){
- let html = ('<p> FirstName: ' + firstName + '</p>') + ('<p>LastName : ' + secondName + '</p>') + ('<p> Email: ' + email + '</p>') + ('<img src="' + imageSource + '" alt="' + secondName + '">');
+ let html = (`<div id= "More ` + key + `" class='personDetails'>
+ <p> FirstName: ` + firstName + `</p>
+ <p>LastName : ` + secondName + `</p>
+ <p> Email: ` + email + `</p>
+ <img src="` + imageSource + `" alt="` + secondName + `">
+  </div>`);
   $("#mainDiv").append(html);
+      
  }); 
-
- $(".DisplayName").on('click', function(){
-    $(html).hide();
+//  ('<p> FirstName: ' + firstName + '</p>') + ('<p>LastName : ' + secondName + '</p>') + ('<p> Email: ' + email + '</p>') + ('<img src="' + imageSource + '" alt="' + secondName + '">');
+  $("#mainDiv").dblclick(function(){
+    $this.hide();
     }); 
 
 });
