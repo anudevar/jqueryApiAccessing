@@ -263,4 +263,9 @@ $(".DisplayName").click(function(){
                    $("div[id='showMoreChild" + clickedKey + "']").html('');
                    $("div[id='showMoreChild" + clickedKey + "']").last().append('<p>Nothing found to display!</p>');
                }
+               // pages numbers
+
+                var url = "https://reqres.in/api/users?page=" + "newparameter=newvalue"
+    history.pushstate(undefined, '', url);
+    window.history.pushState(null, null, "/2")
            }); */
